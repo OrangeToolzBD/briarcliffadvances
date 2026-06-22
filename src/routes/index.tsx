@@ -426,9 +426,9 @@ export function Header() {
                       </div>
                     </div>
                     <Button asChild size="sm" className="bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)]">
-                      <Link to="/" hash="apply">
-                        Get Pre-Qualified <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      <a href={SITE_CONFIG.phoneHref}>
+                        <PhoneCall className="h-4 w-4" /> Call {SITE_CONFIG.phone}
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -515,18 +515,14 @@ export function Header() {
         </NavigationMenu>
 
         <div className="flex items-center gap-2">
-          <a
-            href={SITE_CONFIG.phoneHref}
-            className="hidden items-center gap-2 text-sm font-medium text-foreground hover:text-[color:var(--brand-blue)] xl:inline-flex"
-          >
-            <PhoneCall className="h-4 w-4" /> {SITE_CONFIG.phone}
-          </a>
           <Button
             size="sm"
             className="hidden bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)] shadow-[var(--shadow-elegant)] hover:opacity-95 sm:inline-flex"
             asChild
           >
-            <Link to="/" hash="apply">Get Pre-Qualified</Link>
+            <a href={SITE_CONFIG.phoneHref}>
+              <PhoneCall className="h-4 w-4" /> Call {SITE_CONFIG.phone}
+            </a>
           </Button>
 
           {/* Mobile menu */}
@@ -666,7 +662,9 @@ export function Header() {
                   </a>
                   <SheetClose asChild>
                     <Button asChild className="w-full bg-[image:var(--gradient-cta)] text-[color:var(--accent-success-foreground)]">
-                      <Link to="/" hash="apply">Get Pre-Qualified</Link>
+                      <a href={SITE_CONFIG.phoneHref}>
+                        <PhoneCall className="h-4 w-4" /> Call {SITE_CONFIG.phone}
+                      </a>
                     </Button>
                   </SheetClose>
                 </div>
