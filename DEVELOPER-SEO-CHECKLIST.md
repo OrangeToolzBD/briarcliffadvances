@@ -1,4 +1,4 @@
-# Developer SEO Checklist — 14 Items to Fix
+# Developer SEO Checklist - 14 Items to Fix
 
 > Run this **after** Lovable finishes building the site, never during. Follow in order.
 > Each item: **❌ The Problem → ✅ The Fix → 🧪 How to Test**
@@ -18,7 +18,7 @@
 | 7 | One JSON-LD `@graph` schema per page | ✅ Done |
 | 8 | Remove all fake business info | ✅ Done |
 | 9 | FAQ with visible answers (AEO) | ✅ Done |
-| 10 | Unique 700+ word content per page | ⚠️ Partial — see notes |
+| 10 | Unique 700+ word content per page | ⚠️ Partial - see notes |
 | 11 | Allow AI search bots + real sources (GEO) | ✅ Done |
 | 12 | Core Web Vitals (fonts + images) | ⏳ Pending |
 | 13 | Real 404 status on unknown URLs | ✅ Done |
@@ -32,7 +32,7 @@
 The page uses the preview address (like `something.lovable.app`), or the URL is typed by hand on many pages. When the site goes live, every link points to the wrong, dead place.
 
 **✅ The Fix**
-Keep the real address in ONE place — a `SITE_URL` value inside `src/lib/site-config.ts`. Every page reads it from there. Every canonical, Open Graph URL, sitemap URL, and schema URL must be built from `SITE_URL`. Remove all hardcoded `lovable.app` or hand-typed addresses.
+Keep the real address in ONE place - a `SITE_URL` value inside `src/lib/site-config.ts`. Every page reads it from there. Every canonical, Open Graph URL, sitemap URL, and schema URL must be built from `SITE_URL`. Remove all hardcoded `lovable.app` or hand-typed addresses.
 
 **🧪 How to Test**
 Open the page → right-click → **View Page Source** (not "Inspect"). Search for `lovable.app`. You should find **zero**. The `<link rel="canonical">` should show the real address.
@@ -58,7 +58,7 @@ On a test site, View Source → you should see `noindex`. Open `/robots.txt` →
 
 **What was actually done:**
 - `INDEXABLE` exported from `site-config.ts`, driven by `VITE_INDEXABLE === "true"`.
-- Added `<meta name="robots">` to `__root.tsx` — emits `noindex, nofollow` by default, `index, follow` when live.
+- Added `<meta name="robots">` to `__root.tsx` - emits `noindex, nofollow` by default, `index, follow` when live.
 
 ---
 
@@ -77,7 +77,7 @@ Open `/robots.txt` in the browser.
 
 **What was actually done:**
 - Created `src/lib/seo-robots.ts` (`buildRobotsTxt()` + `robotsTxtResponse()`).
-- Wired into `src/server.ts` — intercepts `/robots.txt` before the SSR pipeline.
+- Wired into `src/server.ts` - intercepts `/robots.txt` before the SSR pipeline.
 - Live mode allows Googlebot, Bingbot, OAI-SearchBot, PerplexityBot, Claude-SearchBot + wildcard, with `Sitemap:` line.
 - Test mode returns `User-agent: * / Disallow: /`.
 
@@ -99,7 +99,7 @@ Open `/sitemap.xml`. You should see all pages, each URL starting with the real d
 - Wired into `src/server.ts`.
 - Lists 62 URLs: 4 static + 12 industries + 38 pillars + 8 suburbs. All absolute.
 - In noindex mode the route returns HTTP 404 so the sitemap can't leak.
-- **Deliberately excluded suburb × pillar combos** — those use templated content and would be doorway pages until Item #10 audits each one.
+- **Deliberately excluded suburb × pillar combos** - those use templated content and would be doorway pages until Item #10 audits each one.
 
 ---
 
@@ -116,7 +116,7 @@ View Source on a few pages → each has a **different** `<title>` and `<meta nam
 
 **What was actually done:**
 - Created `src/lib/seo.ts` with `buildHead({ title, description, path, noindex? })`.
-- Stripped `__root.tsx` of all per-page meta — only charset/viewport/robots/stylesheet remain.
+- Stripped `__root.tsx` of all per-page meta - only charset/viewport/robots/stylesheet remain.
 - Rewrote `head()` on all 8 routes to use `buildHead`. All titles ≤60 chars.
 - Side fixes during refactor:
   - Removed `keywords` meta tag from `index.tsx` (Item #14 will CI-enforce).
@@ -133,7 +133,7 @@ View Source on a few pages → each has a **different** `<title>` and `<meta nam
 The canonical link is missing, relative (`/about`), or points to the wrong address.
 
 **✅ The Fix**
-Every page has exactly ONE canonical link, with a FULL absolute address (`https://realdomain/path`), set on the page itself — **never** in the root layout (`__root.tsx`).
+Every page has exactly ONE canonical link, with a FULL absolute address (`https://realdomain/path`), set on the page itself - **never** in the root layout (`__root.tsx`).
 
 **🧪 How to Test**
 View Source → exactly **one** `<link rel="canonical">`, full address, matching the current page URL.
@@ -142,7 +142,7 @@ View Source → exactly **one** `<link rel="canonical">`, full address, matching
 - `buildHead()` now emits `links: [{ rel: "canonical", href: absoluteUrl(path) }]`.
 - Removed all per-page relative `links: [{ rel: "canonical" }]` overrides.
 - 3 pages (`contact`, `apply-now`, `industry`) gained a canonical they didn't have before.
-- Parent routes (`long-beach.tsx` + `long-beach.$suburb.tsx`) check `matches`/`match` to detect "am I the leaf?" — they only emit head when leaf. Without this fix, nested URLs produced 2 or 3 canonicals.
+- Parent routes (`long-beach.tsx` + `long-beach.$suburb.tsx`) check `matches`/`match` to detect "am I the leaf?" - they only emit head when leaf. Without this fix, nested URLs produced 2 or 3 canonicals.
 
 ---
 
@@ -167,7 +167,7 @@ Put the page URL into **Google Rich Results Test**. It should read the schema wi
   - `/industry/$slug` and `/pillar/$slug` → adds a `Service` node
   - `/long-beach/$suburb` → adds a `Place` node
   - `/long-beach/$suburb/$pillar` → adds Service + Place
-- Single Organization `@id` (`SITE_URL/#organization`) referenced from every other node — no duplication.
+- Single Organization `@id` (`SITE_URL/#organization`) referenced from every other node - no duplication.
 - **Removed** the fake `aggregateRating: 4.8 / 1280` from `index.tsx`.
 - `hasPublicOffice: false` → schema emits Service Area Business pattern (areaServed only, no address/geo/hours). Flip to true and address/geo/openingHoursSpecification appear automatically.
 
@@ -188,11 +188,11 @@ Read the Home, About, and Contact pages. Every number, review, and claim must be
 
 **What was actually done:**
 - Added `stats` (reviewsRating, reviewsCount, businessesFunded, loansFacilitated, fastestFundingHours) and `trustBadges` to `SITE_CONFIG`.
-- Removed third-party credential badges (`BBB Accredited`, `SBA Preferred`, `Trustpilot Verified`) — these can't be mock-flagged. Owner adds them back via `trustBadges` only when real.
-- Centralized every phone number — `index.tsx`, `apply-now.tsx`, `industry.$slug.tsx`, `pillar.$slug.tsx`, `long-beach.$suburb.tsx`, `long-beach.$suburb.$pillar.tsx` all now read from `SITE_CONFIG.phone` / `SITE_CONFIG.phoneHref`. (Pages used to have 3 different inconsistent numbers and one mismatched display vs `tel:` link.)
+- Removed third-party credential badges (`BBB Accredited`, `SBA Preferred`, `Trustpilot Verified`) - these can't be mock-flagged. Owner adds them back via `trustBadges` only when real.
+- Centralized every phone number - `index.tsx`, `apply-now.tsx`, `industry.$slug.tsx`, `pillar.$slug.tsx`, `long-beach.$suburb.tsx`, `long-beach.$suburb.$pillar.tsx` all now read from `SITE_CONFIG.phone` / `SITE_CONFIG.phoneHref`. (Pages used to have 3 different inconsistent numbers and one mismatched display vs `tel:` link.)
 - `contact.tsx`:
   - Phone / email now from `SITE_CONFIG`.
-  - Removed fake "Headquarters: 500 Capital Avenue, Suite 1200, New York, NY 10018" — replaced with a conditional block that shows the real address when `hasPublicOffice: true`, or a service-area list from `areasServed` when false.
+  - Removed fake "Headquarters: 500 Capital Avenue, Suite 1200, New York, NY 10018" - replaced with a conditional block that shows the real address when `hasPublicOffice: true`, or a service-area list from `areasServed` when false.
   - Fixed timezone bug: hours displayed "EST" but the business is Miami (Pacific). Now "PT".
 - All UI stats (`4.8/5`, `$500M+`, `10,000+`) now read from `SITE_CONFIG.stats` so they update from one place.
 
@@ -214,7 +214,7 @@ View Source → you can find the full answer text **even for closed questions**.
 - Hoisted the FAQ data on `index.tsx` to module-level `HOME_FAQS` so `head()` and the `<FAQ />` component share one source of truth.
 - Added `FAQPage` to the home page `@graph` via `extraNodes: [faqNode(...)]`.
 - Added `forceMount` to `AccordionContent` in the FAQ so Radix keeps the answer text in the DOM when an item is collapsed.
-- **Bug fix in `accordion.tsx`:** the existing component referenced `animate-accordion-up` / `animate-accordion-down` keyframes that were **never defined** in this project. That left closed items rendering at full height. Replaced the broken animation classes with `data-[state=closed]:hidden` on the outer Radix `Content` — closed = `display:none` (CSS hide, content still in DOM). Toggle works because Radix flips the `data-state` attribute.
+- **Bug fix in `accordion.tsx`:** the existing component referenced `animate-accordion-up` / `animate-accordion-down` keyframes that were **never defined** in this project. That left closed items rendering at full height. Replaced the broken animation classes with `data-[state=closed]:hidden` on the outer Radix `Content` - closed = `display:none` (CSS hide, content still in DOM). Toggle works because Radix flips the `data-state` attribute.
 - **Verified:** all 6 questions in schema, all 6 answer strings present in raw HTML even with every accordion item starting in `data-state="closed"`. Google reads them; users see them only after clicking.
 
 ---

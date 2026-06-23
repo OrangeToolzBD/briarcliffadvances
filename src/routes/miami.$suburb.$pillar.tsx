@@ -64,6 +64,7 @@ function SuburbPillarPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      <div aria-hidden className="h-16" />
       <main>
         <div className="border-b border-border/60 bg-card/30">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 text-sm">

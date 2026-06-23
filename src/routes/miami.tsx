@@ -32,6 +32,7 @@ function MiamiHub() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      <div aria-hidden className="h-16" />
       <main>
         {/* Hero */}
         <section

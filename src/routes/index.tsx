@@ -398,12 +398,12 @@ export function Header() {
         </a>
 
         {/* Desktop nav */}
-        <NavigationMenu className="hidden lg:flex">
+        <NavigationMenu className="hidden lg:flex lg:!max-w-none lg:flex-1 lg:justify-center">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent hover:bg-secondary focus:bg-secondary data-[state=open]:bg-secondary">Loan Products</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light w-[900px] bg-popover p-6 text-popover-foreground">
+                <div className="light w-[900px] max-w-[calc(100vw-2rem)] overflow-x-auto bg-popover p-6 text-popover-foreground">
                   <div className="grid grid-cols-3 gap-6">
                     {LOAN_GROUPS.map((g) => (
                       <div key={g.heading}>
@@ -438,7 +438,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent hover:bg-secondary focus:bg-secondary data-[state=open]:bg-secondary">Industries</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light w-[1100px] bg-popover p-6 text-popover-foreground">
+                <div className="light w-[1100px] max-w-[calc(100vw-2rem)] overflow-x-auto bg-popover p-6 text-popover-foreground">
                   <div className="grid grid-cols-4 gap-6">
                     {INDUSTRY_GROUPS.map((g) => (
                       <div key={g.heading}>
@@ -460,7 +460,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent hover:bg-secondary focus:bg-secondary data-[state=open]:bg-secondary">Service Areas</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light w-[760px] bg-popover p-6 text-popover-foreground">
+                <div className="light w-[760px] max-w-[calc(100vw-2rem)] overflow-x-auto bg-popover p-6 text-popover-foreground">
                   <div className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="h-4 w-4 text-[color:var(--brand-blue)]" />
                     Funding businesses across the greater {CITY_STATE} metro
@@ -496,7 +496,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent hover:bg-secondary focus:bg-secondary data-[state=open]:bg-secondary">Resources</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="light w-[520px] bg-popover p-4 text-popover-foreground">
+                <div className="light w-[520px] max-w-[calc(100vw-2rem)] overflow-x-auto bg-popover p-4 text-popover-foreground">
                   <div className="grid gap-1">
                     <MegaItem icon={BookOpen} label="How It Works" desc="Our 4-step funding process" homeHash="how" />
                     <MegaItem icon={Star} label="Success Stories" desc="Real Miami businesses we funded" homeHash="stories" />
@@ -709,25 +709,16 @@ function Hero() {
       <div className="pointer-events-none absolute inset-x-0 top-1 h-px bg-gradient-to-r from-transparent via-[color:var(--brand-gold)]/20 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-10 md:py-28">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-gold)]/50 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--brand-gold)] backdrop-blur">
-            <DiamondMark className="h-2.5 w-2.5" /> Brickell · Miami, FL
-          </span>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.15em] text-white/80 backdrop-blur">
-            Member of Florida's lender network
-          </span>
-        </div>
-
-        <h1 className="mt-6 text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-[5.5rem]">
-          Business Loans in{" "}
+        <h1 className="mt-6 text-4xl font-bold leading-[1.04] tracking-tight md:text-6xl lg:text-[5rem]">
+          Capital that closes at{" "}
           <span
             className="bg-clip-text text-transparent"
             style={{ backgroundImage: "linear-gradient(90deg, oklch(0.85 0.13 85), oklch(0.78 0.13 85), oklch(0.72 0.17 30))" }}
           >
-            Miami
+            Miami pace.
           </span>
-          <span className="block text-[color:var(--brand-gold)]/80 text-sm font-medium tracking-[0.4em] uppercase mt-3 md:text-base">
-            est. on Brickell Avenue
+          <span className="block text-[color:var(--brand-gold)]/85 text-sm font-medium tracking-[0.4em] uppercase mt-4 md:text-base">
+            Business loans · SBA · Commercial real estate
           </span>
         </h1>
 
@@ -741,8 +732,9 @@ function Hero() {
         </div>
 
         <p className="mt-6 max-w-xl text-lg text-white/85 md:text-xl">
-          Capital structured for Miami operators. Get matched with trusted
-          lenders in {CITY_STATE} and receive offers in as little as{" "}
+          Business loans, SBA financing and commercial real estate capital,
+          built around Brickell operators, Coral Gables practices, Wynwood
+          founders and Doral logistics. Term sheets in as little as{" "}
           <strong className="text-[color:var(--brand-gold)]">24 hours</strong>.
         </p>
 
@@ -807,7 +799,7 @@ function DiamondMark({ className = "" }: { className?: string }) {
 }
 
 
-/* ---------------- Decorative SVG shapes — Miami Art Deco + tropical ---------------- */
+/* ---------------- Decorative SVG shapes - Miami Art Deco + tropical ---------------- */
 
 /**
  * OceanWaves → Art Deco horizon arches.
@@ -970,7 +962,7 @@ function DotGrid({
 
 /**
  * BlobShape → Stylized monstera/banana leaf.
- * Tropical, lush, slightly off-axis — a Miami botanical accent for hero corners
+ * Tropical, lush, slightly off-axis - a Miami botanical accent for hero corners
  * and background flourishes.
  */
 function BlobShape({
@@ -1118,7 +1110,7 @@ function WhyUs() {
     {
       icon: Banknote,
       title: "Flexible Funding",
-      desc: "From $5,000 working capital to $5,000,000 SBA acquisitions — sized to the deal.",
+      desc: "From $5,000 working capital to $5,000,000 SBA acquisitions - sized to the deal.",
       stat: "$5K-$5M",
       statLabel: "Funding range",
     },
@@ -1139,7 +1131,7 @@ function WhyUs() {
     {
       icon: Users,
       title: "Local Expertise",
-      desc: `Brickell, Wynwood, Coral Gables, Doral — bilingual EN/ES underwriting that knows the submarket.`,
+      desc: `Brickell, Wynwood, Coral Gables, Doral - bilingual EN/ES underwriting that knows the submarket.`,
       stat: "75+",
       statLabel: "Lending partners",
     },
@@ -1183,7 +1175,7 @@ function WhyUs() {
             Why Miami operators choose us
           </h2>
           <p className="mt-5 text-base text-muted-foreground md:text-lg">
-            Built for {CITY_STATE} businesses — fast decisions, transparent terms,
+            Built for {CITY_STATE} businesses - fast decisions, transparent terms,
             and a banker who actually knows the difference between a Brickell deal
             and a Doral deal.
           </p>
@@ -1428,7 +1420,7 @@ function CityHubCTA() {
 /* ---------------- Loan Types ---------------- */
 function LoanTypes() {
   const loans = [
-    { icon: FileText, title: "SBA Loans", tagline: "From 8.5% APR", desc: "SBA 7(a) and 504 — the lowest rates and longest terms available to Miami small businesses.", popular: true },
+    { icon: FileText, title: "SBA Loans", tagline: "From 8.5% APR", desc: "SBA 7(a) and 504 - the lowest rates and longest terms available to Miami small businesses.", popular: true },
     { icon: LineChart, title: "Working Capital Loans", tagline: "Funded in 24 hrs", desc: "Cover payroll, inventory and seasonal gaps with capital sized to your real cash cycle.", popular: true },
     { icon: CreditCard, title: "Business Line of Credit", tagline: "From 9.9% APR", desc: "Revolving capital you draw when you need it. Only pay interest on what you use.", popular: false },
     { icon: Wrench, title: "Equipment Financing", tagline: "From 6.99%", desc: "Equipment serves as collateral. Easy approvals for trucking, construction and medical.", popular: false },
@@ -1523,13 +1515,12 @@ function HowItWorks() {
     { numeral: "I",   title: "Complete Application", desc: "Tell us about your business in 60 seconds. Soft pull only." },
     { numeral: "II",  title: "Get Matched",          desc: "We package your file and shop 75+ lenders for you." },
     { numeral: "III", title: "Compare Offers",       desc: "Review rates, terms and monthly payments side by side." },
-    { numeral: "IV",  title: "Receive Funding",      desc: "Sign and get funded — often in as little as 24 hours." },
+    { numeral: "IV",  title: "Receive Funding",      desc: "Sign and get funded - often in as little as 24 hours." },
   ];
   return (
     <section id="how" className="relative overflow-hidden bg-[color:var(--primary)] py-20 text-white md:py-28">
       {/* Deco background */}
       <DotGrid className="pointer-events-none absolute inset-0 h-full w-full text-white" opacity={0.06} />
-      <SunShape className="pointer-events-none absolute -top-32 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 text-[color:var(--brand-gold)] opacity-20" />
       <RingShape className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 text-[color:var(--brand-gold)]" opacity={0.18} />
       <RingShape className="pointer-events-none absolute -right-24 top-10 h-64 w-64 rotate-180 text-[color:var(--brand-coral)]" opacity={0.15} />
 
@@ -1656,7 +1647,7 @@ function Industries() {
             Industries we fund in {CITY}
           </h2>
           <p className="mt-5 text-muted-foreground md:text-lg">
-            Specialty programs for the sectors that drive Miami-Dade — built by bankers who know each one cold.
+            Specialty programs for the sectors that drive Miami-Dade - built by bankers who know each one cold.
           </p>
         </div>
 
@@ -1762,7 +1753,7 @@ function Calculator() {
       </div>
 
       <div className="relative mx-auto mt-14 grid min-w-0 max-w-6xl gap-8 px-4 sm:px-6 md:grid-cols-[1.1fr_1fr]">
-        {/* Sliders panel — deco frame */}
+        {/* Sliders panel - deco frame */}
         <div className="relative overflow-hidden rounded-3xl border border-[color:var(--brand-gold)]/40 bg-card p-6 shadow-[var(--shadow-elegant)] sm:p-8">
           {/* Frame pinstripes */}
           <span className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--brand-gold)] to-transparent" />
@@ -1807,7 +1798,7 @@ function Calculator() {
           </div>
         </div>
 
-        {/* Result panel — Art Deco poster */}
+        {/* Result panel - Art Deco poster */}
         <div className="relative overflow-hidden rounded-3xl border-2 border-[color:var(--brand-gold)] bg-[color:var(--primary)] p-6 text-white shadow-[var(--shadow-glow)] sm:p-8">
           {/* Sunburst behind the headline number */}
           <SunShape className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 text-[color:var(--brand-gold)] opacity-40" />
@@ -2103,15 +2094,37 @@ export function Footer() {
         </div>
         <FooterCol
           title="Loan Products"
-          links={["SBA Loans", "Business Line of Credit", "Equipment Financing", "Working Capital", "Merchant Cash Advance", "Invoice Factoring"]}
+          links={[
+            { label: "SBA Loans", href: "/pillar/sba-loans" },
+            { label: "SBA 7(a) Loan", href: "/pillar/sba-7a-loan" },
+            { label: "Business Line of Credit", href: "/pillar/business-line-of-credit" },
+            { label: "Working Capital Loans", href: "/pillar/working-capital-loans" },
+            { label: "Equipment Financing", href: "/pillar/equipment-financing" },
+            { label: "Invoice Factoring", href: "/pillar/invoice-factoring" },
+            { label: "Merchant Cash Advance", href: "/pillar/merchant-cash-advance" },
+          ]}
         />
         <FooterCol
           title="Industries"
-          links={["Construction", "Healthcare", "Restaurants", "Transportation", "Manufacturing", "E-Commerce"]}
+          links={[
+            { label: "Construction", href: "/industry/construction" },
+            { label: "Healthcare", href: "/industry/healthcare" },
+            { label: "Restaurants & Hospitality", href: "/industry/restaurants" },
+            { label: "Transportation & Logistics", href: "/industry/transportation" },
+            { label: "Real Estate", href: "/industry/real-estate" },
+            { label: "Professional Services", href: "/industry/professional-services" },
+            { label: "E-Commerce", href: "/industry/e-commerce" },
+          ]}
         />
         <FooterCol
           title="Company"
-          links={["About", "Contact", "Locations", "Blog", "Privacy Policy", "Terms"]}
+          links={[
+            { label: "Apply Now", href: "/apply-now" },
+            { label: "Contact", href: "/contact" },
+            { label: "Miami Hub", href: "/miami" },
+            { label: "Brickell · Downtown · Aventura", href: "/miami" },
+            { label: `Call ${SITE_CONFIG.phone}`, href: SITE_CONFIG.phoneHref },
+          ]}
         />
       </div>
       <div className="border-t border-border">
@@ -2146,14 +2159,19 @@ export function Footer() {
   );
 }
 
-function FooterCol({ title, links }: Readonly<{ title: string; links: string[] }>) {
+function FooterCol({
+  title,
+  links,
+}: Readonly<{ title: string; links: Array<{ label: string; href: string }> }>) {
   return (
     <div>
       <h4 className="text-sm font-semibold">{title}</h4>
       <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
         {links.map((l) => (
-          <li key={l}>
-            <button type="button" className="hover:text-foreground text-left">{l}</button>
+          <li key={l.label}>
+            <a href={l.href} className="hover:text-foreground transition-colors">
+              {l.label}
+            </a>
           </li>
         ))}
       </ul>

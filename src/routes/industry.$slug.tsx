@@ -61,6 +61,7 @@ function IndustryPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      <div aria-hidden className="h-16" />
       <main>
       {/* Breadcrumb */}
       <div className="border-b border-border/60 bg-card/30">

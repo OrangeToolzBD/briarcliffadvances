@@ -35,6 +35,8 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      {/* Spacer for fixed Header so the section content does not slide under it. */}
+      <div aria-hidden className="h-16" />
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">

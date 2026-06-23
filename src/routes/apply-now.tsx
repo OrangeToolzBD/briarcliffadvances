@@ -34,6 +34,8 @@ function ApplyNowPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      {/* Spacer for fixed Header so the section content does not slide under it. */}
+      <div aria-hidden className="h-16" />
 
       <section
         className="relative overflow-hidden border-b border-border py-12 text-white"
