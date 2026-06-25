@@ -1,5 +1,5 @@
-// Briarcliff Advances â€” Miami neighborhood pages.
-// Unique local content per neighborhood â€” never a city-page find/replace.
+// Briarcliff Advances - Miami neighborhood pages.
+// Unique local content per neighborhood - never a city-page find/replace.
 
 export type Suburb = {
   slug: string;
@@ -8,9 +8,9 @@ export type Suburb = {
   county: string;
   /** Short tagline / sub-heading. */
   tagline: string;
-  /** First paragraph â€” unique local intro (700+ word pages should expand on this). */
+  /** First paragraph - unique local intro (700+ word pages should expand on this). */
   intro: string;
-  /** Local landmarks and notable spots â€” used in body copy. */
+  /** Local landmarks and notable spots - used in body copy. */
   landmarks: string[];
   /** Notable local industries / business types. */
   industries: string[];
@@ -25,7 +25,7 @@ export const SUBURBS: Suburb[] = [
     slug: "brickell",
     name: "Brickell",
     county: "City of Miami",
-    tagline: "Latin America's Wall Street â€” financial services, law firms and luxury hospitality",
+    tagline: "Latin America's Wall Street - financial services, law firms and luxury hospitality",
     intro:
       "Brickell is Miami's financial district and the de facto banking capital of Latin America, with the highest concentration of international bank branches in the United States outside of New York. Brickell Avenue runs from the Miami River south through forests of glass condo towers and Class A office space, anchored by Brickell City Centre, the Four Seasons, and dozens of private wealth, law, and family-office operators. Briarcliff Advances works with Brickell business owners to finance practice acquisitions, partner buy-ins, build-outs and CRE purchases sized for the district's premium economics.",
     landmarks: ["Brickell Avenue", "Brickell City Centre", "Mary Brickell Village", "Brickell Key", "Four Seasons Miami"],
@@ -47,7 +47,7 @@ export const SUBURBS: Suburb[] = [
     landmarks: ["Wynwood Walls", "NW 2nd Avenue gallery row", "Wynwood Plaza", "The Wynwood Marketplace", "Wynwood Brewing Co. corridor"],
     industries: ["Galleries & creative studios", "Craft breweries & restaurants", "Technology & SaaS", "Boutique retail & lifestyle"],
     sampleBusinesses: [
-      { name: "NW 2nd Roastery", type: "Craft coffee & roastery", useCase: "Equipment financing for production roaster + second cafÃ©" },
+      { name: "NW 2nd Roastery", type: "Craft coffee & roastery", useCase: "Equipment financing for production roaster + second café" },
       { name: "Wynwood Pixel Studios", type: "Creative tech agency", useCase: "Revenue-based financing for hiring & ad-spend ramp" },
       { name: "Walls District Brewing", type: "Craft brewery & taproom", useCase: "SBA 504 for owner-occupied taproom real estate" },
     ],
@@ -59,13 +59,13 @@ export const SUBURBS: Suburb[] = [
     county: "City of Miami",
     tagline: "Calle Ocho restaurants, cigar makers, family retail and Cuban-American services",
     intro:
-      "Little Havana is the cultural and small-business heart of Miami's Cuban-American community, anchored by Calle Ocho (SW 8th Street) and a dense corridor of family-owned restaurants, cigar makers, cafÃ©s, music venues and immigrant-led retail. Many businesses here are second- and third-generation operators and the financing patterns reflect that: succession planning, real estate purchases of buildings the family has rented for decades, and equipment financing for restaurants and bakeries. Briarcliff Advances works with Little Havana owners on SBA-led acquisitions, working capital, and buildouts.",
+      "Little Havana is the cultural and small-business heart of Miami's Cuban-American community, anchored by Calle Ocho (SW 8th Street) and a dense corridor of family-owned restaurants, cigar makers, cafés, music venues and immigrant-led retail. Many businesses here are second- and third-generation operators and the financing patterns reflect that: succession planning, real estate purchases of buildings the family has rented for decades, and equipment financing for restaurants and bakeries. Briarcliff Advances works with Little Havana owners on SBA-led acquisitions, working capital, and buildouts.",
     landmarks: ["Calle Ocho (SW 8th St)", "Domino Park", "Ball & Chain", "Cuban Memorial Boulevard", "Tower Theater"],
-    industries: ["Restaurants & cafÃ©s", "Cigar manufacturing & retail", "Family-owned retail", "Music & entertainment venues"],
+    industries: ["Restaurants & cafés", "Cigar manufacturing & retail", "Family-owned retail", "Music & entertainment venues"],
     sampleBusinesses: [
-      { name: "CafeterÃ­a La Esquina", type: "Cuban restaurant", useCase: "SBA 7(a) for second-generation family buyout" },
+      { name: "Cafetería La Esquina", type: "Cuban restaurant", useCase: "SBA 7(a) for second-generation family buyout" },
       { name: "Calle Ocho Cigars", type: "Cigar maker & retail", useCase: "Inventory line of credit for premium leaf purchases" },
-      { name: "La PequeÃ±a Bakery", type: "Cuban bakery", useCase: "Equipment financing for industrial ovens + commissary expansion" },
+      { name: "La Pequeña Bakery", type: "Cuban bakery", useCase: "Equipment financing for industrial ovens + commissary expansion" },
     ],
     zips: ["33135", "33125"],
   },
@@ -91,7 +91,7 @@ export const SUBURBS: Suburb[] = [
     county: "Miami-Dade County",
     tagline: "Miracle Mile professional services, international HQs and luxury hospitality",
     intro:
-      "Coral Gables â€” the City Beautiful â€” is South Florida's hub for international business: more than 150 multinational corporations operate Latin American or Caribbean headquarters here, alongside a deep bench of law firms, accounting groups, healthcare practices and the University of Miami. Miracle Mile concentrates retail and hospitality into eight Mediterranean-styled blocks; Ponce de Leon and Alhambra Circle carry the bulk of the professional services. Briarcliff Advances works with Gables owners on SBA-led acquisitions, owner-occupied CRE, and working capital lines sized to the city's premium rents.",
+      "Coral Gables - the City Beautiful - is South Florida's hub for international business: more than 150 multinational corporations operate Latin American or Caribbean headquarters here, alongside a deep bench of law firms, accounting groups, healthcare practices and the University of Miami. Miracle Mile concentrates retail and hospitality into eight Mediterranean-styled blocks; Ponce de Leon and Alhambra Circle carry the bulk of the professional services. Briarcliff Advances works with Gables owners on SBA-led acquisitions, owner-occupied CRE, and working capital lines sized to the city's premium rents.",
     landmarks: ["Miracle Mile", "Biltmore Hotel", "Venetian Pool", "University of Miami", "Alhambra Circle business corridor"],
     industries: ["International HQs & professional services", "Law & accounting", "Healthcare & medical practices", "Luxury hospitality"],
     sampleBusinesses: [
@@ -107,7 +107,7 @@ export const SUBURBS: Suburb[] = [
     county: "City of Miami",
     tagline: "Luxury retail, contemporary art galleries and design-forward hospitality",
     intro:
-      "The Miami Design District is one of the most concentrated luxury-retail corridors in the United States: HermÃ¨s, Louis Vuitton, Cartier, Dior and dozens of contemporary art galleries built into the redeveloped Buena Vista neighborhood north of Wynwood. The district mixes flagship retail tenants paying among the country's highest per-square-foot rents with independent showrooms, design studios, and a fast-growing collection of restaurants from internationally known chefs. Briarcliff Advances structures financing for independent operators in the district: build-outs, inventory lines, gallery acquisitions and hospitality cash flow.",
+      "The Miami Design District is one of the most concentrated luxury-retail corridors in the United States: Hermès, Louis Vuitton, Cartier, Dior and dozens of contemporary art galleries built into the redeveloped Buena Vista neighborhood north of Wynwood. The district mixes flagship retail tenants paying among the country's highest per-square-foot rents with independent showrooms, design studios, and a fast-growing collection of restaurants from internationally known chefs. Briarcliff Advances structures financing for independent operators in the district: build-outs, inventory lines, gallery acquisitions and hospitality cash flow.",
     landmarks: ["Palm Court", "Institute of Contemporary Art Miami (ICA)", "Buena Vista Building", "Design District plazas", "NE 39th Street showrooms"],
     industries: ["Luxury retail & flagships", "Contemporary art galleries", "Design studios & showrooms", "Fine-dining restaurants"],
     sampleBusinesses: [
@@ -127,7 +127,7 @@ export const SUBURBS: Suburb[] = [
     landmarks: ["Bayside Marketplace", "Adrienne Arsht Center", "Miami-Dade County Courthouse", "PortMiami terminals", "American Airlines Arena (Kaseya Center)"],
     industries: ["Government & legal services", "Conference & hospitality", "Cruise & port-tied services", "Professional services"],
     sampleBusinesses: [
-      { name: "Bayfront Tower CafÃ©s", type: "CafÃ© group", useCase: "Working capital + equipment line for three downtown locations" },
+      { name: "Bayfront Tower Cafés", type: "Café group", useCase: "Working capital + equipment line for three downtown locations" },
       { name: "Flagler Street Law Partners", type: "Law firm", useCase: "Unsecured business line for partner draws & growth" },
       { name: "PortMiami Provisioning Co.", type: "Cruise-supply wholesaler", useCase: "Accounts receivable financing for slow-pay terms" },
     ],

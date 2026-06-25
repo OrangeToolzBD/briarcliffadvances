@@ -109,7 +109,7 @@ function MiamiHub() {
           pillars={MONEY_PILLARS}
         />
 
-        {/* Suburb Ã— Services matrix */}
+        {/* Suburb x Services matrix */}
         <SuburbServicesMatrix />
 
         {/* Vertical pillars */}
@@ -237,7 +237,7 @@ function SuburbServicesMatrix() {
                   params={{ suburb: s.slug }}
                   className="font-medium text-[color:var(--brand-blue)] hover:underline"
                 >
-                  View {s.name} hub â†’
+                  View {s.name} hub ->
                 </Link>
               </div>
             </div>

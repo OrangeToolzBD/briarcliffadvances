@@ -1,4 +1,4 @@
-// Briarcliff Advances â€” SEO pillar pages for Miami, FL.
+// Briarcliff Advances - SEO pillar pages for Miami, FL.
 // 14 Money Pillars + 14 Vertical Pillars = 28 total.
 
 export type PillarKind = "money" | "vertical";
@@ -11,7 +11,7 @@ export type Pillar = {
   description: string;
   bullets: string[];
   highlight: string;
-  /** Approximate national monthly search volume â€” used for SEO ordering. */
+  /** Approximate national monthly search volume - used for SEO ordering. */
   volume?: number;
 };
 
@@ -107,7 +107,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "Buy an existing Miami business",
     description:
-      "SBA-backed acquisition financing for partner buyouts, succession purchases, and bolt-on deals across Miami-Dade â€” particularly active for second-generation Little Havana and Coral Gables family-business transitions.",
+      "SBA-backed acquisition financing for partner buyouts, succession purchases, and bolt-on deals across Miami-Dade - particularly active for second-generation Little Havana and Coral Gables family-business transitions.",
     bullets: ["10% down with SBA 7(a)", "Goodwill financing", "Earn-out friendly"],
     highlight: "Up to $5M",
   },
@@ -192,7 +192,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Clinics & physician groups",
     description:
-      "Acquisition, partner buy-in, expansion and working capital tailored to the rhythms of insurance reimbursements â€” sized for Miami's dense medical aesthetics, cardiology and primary-care market.",
+      "Acquisition, partner buy-in, expansion and working capital tailored to the rhythms of insurance reimbursements - sized for Miami's dense medical aesthetics, cardiology and primary-care market.",
     bullets: ["Up to 100% project financing", "Terms up to 10 years", "Deferred payment options"],
     highlight: "$50K-$7M",
     volume: 500,
@@ -203,7 +203,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Fit-out, expansion & equipment",
     description:
-      "Open the second location, refresh the dining room, or weather a slow season with capital structured for Miami hospitality cash flow â€” Calle Ocho cafÃ©s to Brickell steakhouses.",
+      “Open the second location, refresh the dining room, or weather a slow season with capital structured for Miami hospitality cash flow, from Calle Ocho cafés to Brickell steakhouses.”,
     bullets: ["Daily, weekly or monthly payments", "Same-day approvals", "No equity required"],
     highlight: "$25K-$2M",
     volume: 500,
@@ -224,7 +224,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Ground-up & renovation projects",
     description:
-      "Multi-draw financing aligned to your construction schedule with interest-only periods during the build phase â€” sized for Miami mixed-use, hospitality and Brickell condo retail builds.",
+      "Multi-draw financing aligned to your construction schedule with interest-only periods during the build phase - sized for Miami mixed-use, hospitality and Brickell condo retail builds.",
     bullets: ["Up to 80% LTC", "12-36 month terms", "Convertible to permanent financing"],
     highlight: "$250K-$25M",
   },
@@ -244,7 +244,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Beauty, wellness & medical aesthetics",
     description:
-      "Chair rentals, suite build-outs, product inventory and marketing â€” plus medical aesthetics financing for the laser, injectables and body-contouring market Miami is known for.",
+      "Chair rentals, suite build-outs, product inventory and marketing - plus medical aesthetics financing for the laser, injectables and body-contouring market Miami is known for.",
     bullets: ["Equipment & build-out", "Med-spa & aesthetics", "Suite operators welcome"],
     highlight: "Quick pre-qual",
   },
@@ -254,7 +254,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Inventory & storefront capital",
     description:
-      "Stock up for the season, open a second location, or refresh your Miami storefront with capital sized to retail cash flow cycles â€” Aventura Mall to Design District flagships.",
+      "Stock up for the season, open a second location, or refresh your Miami storefront with capital sized to retail cash flow cycles - Aventura Mall to Design District flagships.",
     bullets: ["Seasonal payment structures", "Inventory financing", "POS-integrated underwriting"],
     highlight: "$15K-$1M",
   },
@@ -304,7 +304,7 @@ export const VERTICAL_PILLARS: Pillar[] = [
     kind: "vertical",
     tagline: "Capital for women-owned businesses",
     description:
-      "Working capital, SBA and microloan programs tailored to certified women-owned businesses across Miami â€” one of the highest-density Latina-women-owned business markets in the U.S.",
+      "Working capital, SBA and microloan programs tailored to certified women-owned businesses across Miami - one of the highest-density Latina-women-owned business markets in the U.S.",
     bullets: ["SBA & microloans", "WBE-friendly underwriting", "$5K-$5M"],
     highlight: "Equity-free",
   },

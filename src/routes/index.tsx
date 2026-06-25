@@ -748,9 +748,9 @@ function DiamondMark({ className = "" }: { className?: string }) {
 /* ---------------- Decorative SVG shapes - Miami Art Deco + tropical ---------------- */
 
 /**
- * OceanWaves â†’ Art Deco horizon arches.
+ * OceanWaves -> Art Deco horizon arches.
  * Three concentric arches across the width, evocative of MiMo grille work and
- * the curved faÃ§ades on Lincoln Road and Ocean Drive.
+ * the curved facades on Lincoln Road and Ocean Drive.
  */
 function OceanWaves({ className }: Readonly<{ className?: string }>) {
   return (
@@ -773,7 +773,7 @@ function OceanWaves({ className }: Readonly<{ className?: string }>) {
 }
 
 /**
- * SunShape â†’ Art Deco sunburst.
+ * SunShape -> Art Deco sunburst.
  * Thin radial rays from a small center disk, in the SoBe / Bacardi Tower spirit.
  * Replaces the previous solid radial-gradient circle.
  */
@@ -807,7 +807,7 @@ function SunShape({ className }: Readonly<{ className?: string }>) {
 }
 
 /**
- * PalmLeaf â†’ Monstera leaf silhouette.
+ * PalmLeaf -> Monstera leaf silhouette.
  * (Currently unused in the layout, kept exported for future placement.)
  */
 function PalmLeaf({ className }: Readonly<{ className?: string }>) {
@@ -832,7 +832,7 @@ function PalmLeaf({ className }: Readonly<{ className?: string }>) {
 }
 
 /**
- * WavyLines â†’ Art Deco grille (chevron stripes).
+ * WavyLines -> Art Deco grille (chevron stripes).
  * Replaces the horizontal wavy lines with stacked chevrons, the signature
  * Art Deco "speed lines" motif found across Miami Beach building facades.
  */
@@ -871,7 +871,7 @@ function WavyLines({
 }
 
 /**
- * DotGrid â†’ Miami diamond grid.
+ * DotGrid -> Miami diamond grid.
  * Rhombus tessellation, the Art Deco terrazzo / breeze-block pattern.
  */
 function DotGrid({
@@ -907,7 +907,7 @@ function DotGrid({
 }
 
 /**
- * BlobShape â†’ Stylized monstera/banana leaf.
+ * BlobShape -> Stylized monstera/banana leaf.
  * Tropical, lush, slightly off-axis - a Miami botanical accent for hero corners
  * and background flourishes.
  */
@@ -942,7 +942,7 @@ function BlobShape({
 }
 
 /**
- * RingShape â†’ Art Deco fan.
+ * RingShape -> Art Deco fan.
  * A half-fan composed of alternating radial wedges, the classic
  * "Florida sunset" deco motif (think the lobby of the Delano).
  */
@@ -1835,7 +1835,7 @@ function Field({ label, value, children }: Readonly<{ label: string; value: stri
 function SuccessStories() {
   const stories = [
     { name: "Brickell Avenue Wealth Advisors", amount: "$1,400,000", result: "Funded a partner buy-in and Brickell office build-out.", type: "SBA 7(a) Loan" },
-    { name: "Calle Ocho CafeterÃ­a Group", amount: "$320,000", result: "Acquired second location plus working capital for opening.", type: "SBA 7(a) + Working Capital" },
+    { name: "Calle Ocho Cafetería Group", amount: "$320,000", result: "Acquired second location plus working capital for opening.", type: "SBA 7(a) + Working Capital" },
     { name: "NW 25th Freight Forwarders", amount: "$2,100,000", result: "Purchased a Doral flex warehouse and added two reefer trucks.", type: "SBA 504 + Equipment" },
   ];
   return (
