@@ -378,7 +378,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-white/90 text-foreground backdrop-blur supports-[backdrop-filter]:bg-white/75">
       <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <a href="/" className="flex items-center gap-2 font-semibold">
-          <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-[70px] w-auto" />
+          <img src={siteLogoUrl} width={676} height={369} alt={SITE_CONFIG.name} className="h-[70px] w-auto" />
           <span className="sr-only">{SITE_CONFIG.name}</span>
         </a>
 
@@ -1439,7 +1439,7 @@ function LoanTypes() {
                 aria-label={`${title} icon`}
                 className="-ml-7 h-32 w-32 bg-no-repeat"
                 style={{
-                  backgroundImage: "url(/serviceIcons.png)",
+                  backgroundImage: "url(/serviceIcons.webp)",
                   backgroundSize: "300% 200%",
                   backgroundPosition: spritePos,
                 }}
@@ -2018,7 +2018,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 font-semibold">
-            <img src={siteLogoUrl} alt={SITE_CONFIG.name} className="h-[80px] w-auto" />
+            <img src={siteLogoUrl} width={676} height={369} alt={SITE_CONFIG.name} className="h-[80px] w-auto" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
             A business funding marketplace serving {CITY_STATE} and the rest of South Florida.
